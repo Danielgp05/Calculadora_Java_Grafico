@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="fondo" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="350.0" styleClass="background" stylesheets="@css/estilos.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.CalculadoraController">
+	<!-- TODO Add Nodes -->
+	<children>
+		<MenuBar layoutX="0.0" layoutY="0.0" prefHeight="26.0" prefWidth="250.0">
+			<menus>
+				<Menu fx:id="text_ver" mnemonicParsing="false" styleClass="MenuBar" text="%form.ver">
+					<items>
+						<MenuItem fx:id="menu_Historial" mnemonicParsing="false" text="%form.historial" />
+						<MenuItem fx:id="menu_Salir" mnemonicParsing="false" text="%form.salir" />
+					</items>
+				</Menu>
+				<Menu fx:id="text_edicion" mnemonicParsing="false" text="%form.edicion">
+					<items>
+						<MenuItem fx:id="menu_Copiar" mnemonicParsing="false" text="Copiar" />
+						<MenuItem fx:id="menu_Pegar" mnemonicParsing="false" text="Pegar" />
+					</items>
+				</Menu>
+				<Menu fx:id="text_ayuda" mnemonicParsing="false" text="%form.ayuda">
+					<items>
+						<MenuItem fx:id="menu_Ayuda" mnemonicParsing="false" text="%form.verayuda" />
+						<MenuItem fx:id="menu_AcercaDe" mnemonicParsing="false" text="%form.acercade" />
+					</items>
+				</Menu>
+            <Menu fx:id="text_idioma" mnemonicParsing="false" text="%form.idioma">
+              <items>
+                <MenuItem fx:id="castellano" mnemonicParsing="false" text="%form.castellano" />
+                <MenuItem fx:id="valenciano" mnemonicParsing="false" text="%form.valenciano" />
+                <MenuItem fx:id="ingles" mnemonicParsing="false" text="%form.ingles" />
+                
+              </items>
+            </Menu>
+			</menus>
+		</MenuBar>
+      <Button fx:id="boton_pos_neg" focusTraversable="false" layoutX="8.0" layoutY="487.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="80.0" text="+/-" textAlignment="CENTER">
+         <font>
+            <Font name="Calibri Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="boton_0" focusTraversable="false" layoutX="93.0" layoutY="487.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="80.0" styleClass="boton-number" stylesheets="@css/estilos.css" text="0" textAlignment="CENTER">
+         <font>
+            <Font name="Calibri Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="boton_coma" focusTraversable="false" layoutX="178.0" layoutY="487.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="80.0" text="," textAlignment="CENTER">
+         <font>
+            <Font name="Calibri Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="boton_igual" focusTraversable="false" layoutX="262.0" layoutY="487.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="80.0" styleClass="boton-igual" text="=" textAlignment="CENTER">
+         <font>
+            <Font name="Calibri Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="boton_1" focusTraversable="false" layoutX="8.0" layoutY="430.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="80.0" styleClass="boton-number" text="1" textAlignment="CENTER">
+         <font>
+            <Font name="Calibri Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="boton_2" focusTraversable="false" layoutX="93.0" layoutY="430.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="80.0" styleClass="boton-number" text="2" textAlignment="CENTER">
+         <font>
+            <Font name="Calibri Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="boton_3" focusTraversable="false" layoutX="178.0" layoutY="430.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="80.0" styleClass="boton-number" text="3" textAlignment="CENTER">
+         <font>
+            <Font name="Calibri Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="boton_sumar" focusTraversable="false" layoutX="262.0" layoutY="430.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="80.0" text="+" textAlignment="CENTER">
+         <font>
+            <Font name="Calibri Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="boton_4" focusTraversable="false" layoutX="8.0" layoutY="373.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="80.0" styleClass="boton-number" text="4" textAlignment="CENTER">
+         <font>
+            <Font name="Calibri Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="boton_5" focusTraversable="false" layoutX="93.0" layoutY="373.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="80.0" styleClass="boton-number" text="5" textAlignment="CENTER">
+         <font>
+            <Font name="Calibri Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="boton_6" focusTraversable="false" layoutX="178.0" layoutY="373.0" mnemonicParsing="false" onKeyPressed="#pulsarTecla" prefHeight="52.0" prefWidth="80.0" styleClass="boton-number" text="6" textAlignment="CENTER">
+         <font>
+            <Font name="Calibri Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="boton_restar" focusTraversable="false" layoutX="262.0" layoutY="373.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="80.0" text="-" textAlignment="CENTER">
+         <font>
+            <Font name="Calibri Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="boton_7" focusTraversable="false" layoutX="8.0" layoutY="316.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="80.0" styleClass="boton-number" text="7" textAlignment="CENTER">
+         <font>
+            <Font name="Calibri Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="boton_8" focusTraversable="false" layoutX="93.0" layoutY="316.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="80.0" styleClass="boton-number" text="8" textAlignment="CENTER">
+         <font>
+            <Font name="Calibri Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="boton_9" focusTraversable="false" layoutX="178.0" layoutY="316.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="80.0" styleClass="boton-number" text="9" textAlignment="CENTER">
+         <font>
+            <Font name="Calibri Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="boton_multiplicar" focusTraversable="false" layoutX="262.0" layoutY="316.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="80.0" text="x" textAlignment="CENTER">
+         <font>
+            <Font name="Calibri Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="boton_inversa" focusTraversable="false" layoutX="8.0" layoutY="259.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="80.0" text="1/x" textAlignment="CENTER">
+         <font>
+            <Font name="Calibri Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="boton_porcentaje" focusTraversable="false" layoutX="93.0" layoutY="259.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="80.0" text="\%" textAlignment="CENTER">
+         <font>
+            <Font name="Calibri Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="boton_raiz" focusTraversable="false" layoutX="178.0" layoutY="259.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="80.0" text="√" textAlignment="CENTER">
+         <font>
+            <Font name="Calibri Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="boton_division" focusTraversable="false" layoutX="262.0" layoutY="259.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="80.0" text="÷" textAlignment="CENTER">
+         <font>
+            <Font name="Calibri Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="boton_mc" focusTraversable="false" layoutX="8.0" layoutY="217.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="80.0" text="MC" textAlignment="CENTER">
+         <font>
+            <Font name="Calibri Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="boton_ce" focusTraversable="false" layoutX="93.0" layoutY="217.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="80.0" text="CE" textAlignment="CENTER">
+         <font>
+            <Font name="Calibri Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="boton_c" focusTraversable="false" layoutX="178.0" layoutY="217.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="80.0" text="C" textAlignment="CENTER">
+         <font>
+            <Font name="Calibri Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="boton_borrar" focusTraversable="false" layoutX="262.0" layoutY="217.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="80.0" text="⌫" textAlignment="CENTER">
+         <font>
+            <Font name="Calibri Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="boton_m_menos" focusTraversable="false" layoutX="8.0" layoutY="178.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="80.0" styleClass="botones-arriba" text="M-" textAlignment="CENTER">
+         <font>
+            <Font name="Calibri Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="boton_m_mas" focusTraversable="false" layoutX="93.0" layoutY="178.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="80.0" styleClass="botones-arriba" text="M+" textAlignment="CENTER">
+         <font>
+            <Font name="Calibri Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="boton_mr" focusTraversable="false" layoutX="178.0" layoutY="178.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="80.0" styleClass="botones-arriba" text="MR" textAlignment="CENTER">
+         <font>
+            <Font name="Calibri Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="boton_ms" focusTraversable="false" layoutX="262.0" layoutY="178.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="80.0" styleClass="botones-arriba" text="MS" textAlignment="CENTER">
+         <font>
+            <Font name="Calibri Bold" size="14.0" />
+         </font>
+      </Button>
+        <Label fx:id="label_info" accessibleRole="TEXT_AREA" alignment="BOTTOM_RIGHT" contentDisplay="TOP" layoutX="18.0" layoutY="43.0" prefHeight="115.0" prefWidth="315.0" styleClass="background-label" stylesheets="@css/estilos.css" text="0">
+         <font>
+            <Font name="Calibri Bold" size="36.0" />
+         </font>
+      </Label>
+      <Label fx:id="label_operacion" alignment="TOP_RIGHT" focusTraversable="true" layoutX="30.0" layoutY="43.0" onKeyPressed="#pulsarTecla" prefHeight="25.0" prefWidth="301.0" styleClass="background-label" stylesheets="@css/estilos.css" textAlignment="RIGHT">
+         <font>
+            <Font name="Calibri" size="14.0" />
+         </font>
+      </Label>
+      <ColorPicker fx:id="cambiar_fondo" focusTraversable="false" layoutX="249.0" prefHeight="25.0" prefWidth="101.0" stylesheets="@css/estilos.css">
+         <value>
+            <Color />
+         </value></ColorPicker>
+
+	</children>
+
+</AnchorPane>

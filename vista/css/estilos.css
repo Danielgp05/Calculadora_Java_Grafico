@@ -1,0 +1,32 @@
+.background { 
+	-fx-background-color: #000000;
+}
+
+#fondo:selected {
+    /* Cambia el color de fondo cuando el ColorPicker cambia */
+    -fx-background-color: derive(-fx-color, 50%);
+    
+}
+
+.boton-number{
+	-fx-background-color: #5A5B5C;
+	-fx-text-fill: #FFFFFF;
+}
+
+.boton-igual{
+	-fx-background-color: #027EF9;
+	-fx-text-fill: #FFFFFF;
+	
+}
+
+.botones-arriba{
+	-fx-background-color: #323334;
+	-fx-text-fill: #FFFFFF;
+		
+}
+
+.background-label { 
+	-fx-background-color: #FFFFFF;
+	-fx-padding: 15px;
+	
+}

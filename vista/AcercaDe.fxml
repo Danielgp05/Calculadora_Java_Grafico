@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="ventana_acercaDe" prefHeight="300.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.AcercaDeController">
+   <children>
+      <ImageView fitHeight="182.0" fitWidth="150.0" layoutX="15.0" layoutY="90.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/calculator_icon.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="label_titulo" layoutX="85.0" layoutY="25.0" text="Calculadora 2.0">
+         <font>
+            <Font name="Calibri Bold Italic" size="36.0" />
+         </font>
+      </Label>
+      <Label fx:id="label_nombre" layoutX="179.0" layoutY="116.0" text="Creador: Daniel García Poves" />
+      <Label fx:id="label_fecha" layoutX="179.0" layoutY="171.0" text="Fecha Actual: AQUI VA LA FECHA" />
+      <Label fx:id="label_version" layoutX="179.0" layoutY="198.0" text="Versión : 2024/04" />
+      <Label fx:id="label_curso" layoutX="179.0" layoutY="142.0" text="Curso: 1º DAM" />
+   </children>
+</AnchorPane>
